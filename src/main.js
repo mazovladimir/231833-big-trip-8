@@ -11,5 +11,10 @@ tripFilter.insertAdjacentHTML(`beforeend`, makeFilter(`Past`));
 
 const tripDayItems = document.querySelector(`.trip-day__items`);
 
-tripDayItems.insertAdjacentHTML(`beforeend`, makeTask('icon', 'Taxi to Airport', '10:00', '11:00', '1h 30s', '20', ['order1', 'order2']));
+const renderTrips = (tag) => {
+    for (let i = 0; i < 7; i++) {
+        tag.insertAdjacentHTML(`beforeend`, makeTask('icon', 'Taxi to Airport', '10:00', '11:00', '1h 30s', '20', ['order1', 'order2']));
+    }
+}
 
+renderTrips(tripDayItems);
